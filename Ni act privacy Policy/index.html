@@ -73,7 +73,14 @@ button{font:inherit;color:inherit}
 .panel{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:2rem 2.2rem;min-height:16rem;touch-action:pan-y}
 .panel[hidden]{display:none}
 .panel h2{font-size:1.7rem;line-height:1.2;color:var(--ink);margin:0 0 .8rem;font-weight:600}
-.panel p{margin:0;max-width:62ch}
+.panel p{margin:0;max-width:62ch;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.contact{margin:1.2rem 0 0;border:1px solid var(--rule);border-radius:10px;overflow:hidden;font-family:var(--sans)}
+.contact div{display:flex;gap:1rem;padding:.8rem 1rem;border-top:1px solid var(--rule)}
+.contact div:first-child{border-top:0}
+.contact dt{flex:0 0 6.5rem;color:var(--muted);font-size:.92rem}
+.contact dd{margin:0;color:var(--ink);font-weight:600;font-size:1rem}
+.contact a{color:var(--ink);text-underline-offset:3px}
+@media (max-width:480px){.contact div{flex-direction:column;gap:.1rem}.contact dt{flex:none}}
 .pill{display:inline-block;font:600 .82rem var(--sans);background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:.25rem .8rem;margin:1rem .4rem 0 0;color:var(--ink)}
 .panel.in{animation:swap .25s ease-out}
 @keyframes swap{from{opacity:0;transform:translateX(var(--dx,12px))}to{opacity:1;transform:none}}
@@ -171,6 +178,22 @@ footer{max-width:1100px;margin:0 auto;padding:1.5rem 1.25rem 2.5rem;border-top:1
     <section class="panel" id="p-changes" role="tabpanel" data-tab="Changes" hidden>
       <h2>8. Changes to This Privacy Policy</h2>
       <p>This Privacy Policy may be updated if the app's functionality or data practices change. The latest version will be published on the Privacy Policy webpage.</p>
+    </section>
+
+    <section class="panel" id="p-internet" role="tabpanel" data-tab="Internet" hidden>
+      <h2>9. Internet Usage and Data Transmission</h2>
+      <p>The app uses an internet connection to access and operate its online features. Internet usage is limited to the app's functionality. The app does not intentionally transmit users' entered calculation data to any server or third party. The dates and information entered into the calculator are used only to perform calculations and display results. No financial transactions or payments are processed through the app.</p>
+      <span class="pill">No payments</span><span class="pill">Entries not transmitted</span>
+    </section>
+
+    <section class="panel" id="p-contact" role="tabpanel" data-tab="Contact" hidden>
+      <h2>10. Contact Us</h2>
+      <p>For questions about this Privacy Policy, contact the app developer:</p>
+      <dl class="contact">
+        <div><dt>App name</dt><dd>NI Act 1881 Legal Calculator</dd></div>
+        <div><dt>Developer</dt><dd>Nishchay Sharma</dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+918233107683">8233107683</a></dd></div>
+      </dl>
     </section>
   </div>
 </div>
